@@ -348,7 +348,7 @@ class FarmRepository(private val db: AppDatabase) {
         val reply = when {
             userMessage.contains("withdraw", ignoreCase = true) -> "Withdrawals are processed within 1-3 business hours back to your verified bank account."
             userMessage.contains("yield", ignoreCase = true) || userMessage.contains("earning", ignoreCase = true) || userMessage.contains("egg", ignoreCase = true) -> "Daily egg yields are calculated and credited daily at 00:00 UTC based on your active hen flock egg production rates."
-            userMessage.contains("insurance", ignoreCase = true) -> "All hen flock packages listed on PoultryVest are 100% insured against avian health hazards, climate stress, and mortality underwritten by PoultryShield Assurance."
+            userMessage.contains("insurance", ignoreCase = true) -> "All hen flock packages listed on EggVest are 100% insured against avian health hazards, climate stress, and mortality underwritten by EggShield Assurance."
             else -> "Thank you for reaching out! Our poultry farm support agent has received your query and will update you shortly."
         }
 
@@ -412,7 +412,7 @@ class FarmRepository(private val db: AppDatabase) {
             totalRoiPercent = totalRoiPercent,
             availableUnits = totalUnits,
             totalUnits = totalUnits,
-            farmLocation = farmLocation.ifBlank { "FarmVest Station Alpha" },
+            farmLocation = farmLocation.ifBlank { "EggVest Station Alpha" },
             description = description.ifBlank { "High-grade farm managed livestock package." },
             feedType = feedType.ifBlank { "Organic natural pasture forage." },
             expectedCycleOutput = "Target yield cycle $durationDays days"

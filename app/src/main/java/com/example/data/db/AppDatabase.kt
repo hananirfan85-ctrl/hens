@@ -89,7 +89,7 @@ abstract class AppDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
-                    "poultryvest_database"
+                    "eggvest_database"
                 )
                     .addCallback(DatabaseCallback(context))
                     .build()
@@ -116,11 +116,11 @@ private suspend fun seedDatabase(db: AppDatabase) {
     val initialUser = UserEntity(
         id = "usr_001",
         fullName = "Hanan Irfan",
-        email = "hanan.irfan@poultryvest.com",
+        email = "hanan.irfan@eggvest.com",
         phone = "+1 (555) 234-5678",
         walletBalance = 3420.00,
         totalEarnings = 580.00,
-        referralCode = "POULTRYVEST-HANAN85",
+        referralCode = "EGGVEST-HANAN85",
         kycStatus = KycStatus.VERIFIED,
         isPinEnabled = true,
         isBiometricsEnabled = true,
@@ -373,7 +373,7 @@ private suspend fun seedDatabase(db: AppDatabase) {
         SupportMessageEntity(
             ticketId = "TCK-8819",
             senderRole = "SUPPORT",
-            message = "Hello Hanan! Yes, our poultry insurance covers 100% mortality, climate stress, and avian health hazards underwritten by PoultryShield Assurance.",
+            message = "Hello Hanan! Yes, our poultry insurance covers 100% mortality, climate stress, and avian health hazards underwritten by EggShield Assurance.",
             timestamp = now - (6 * 3600000L)
         )
     )

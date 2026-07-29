@@ -88,7 +88,7 @@ fun ProfileScreen(
                     )
 
                     Text(
-                        text = user?.email ?: "hanan.irfan@farmvest.com",
+                        text = user?.email ?: "hanan.irfan@eggvest.com",
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -179,7 +179,7 @@ fun ProfileScreen(
 
                         Surface(color = MaterialTheme.colorScheme.primaryContainer, shape = RoundedCornerShape(8.dp)) {
                             Text(
-                                text = "Code: ${user?.referralCode ?: "FARMVEST-HANAN85"}",
+                                text = "Code: ${user?.referralCode ?: "EGGVEST-HANAN85"}",
                                 style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold),
                                 color = MaterialTheme.colorScheme.onPrimaryContainer,
                                 modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)

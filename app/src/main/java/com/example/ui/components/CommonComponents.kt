@@ -30,7 +30,7 @@ import com.example.ui.theme.*
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun PoultryVestTopBar(
+fun EggVestTopBar(
     title: String,
     userRole: UserRole,
     unreadNotificationCount: Int = 0,
@@ -130,7 +130,7 @@ enum class NavigationTab(val title: String, val icon: ImageVector) {
 }
 
 @Composable
-fun FarmVestBottomNavigation(
+fun EggVestBottomNavigation(
     currentTab: NavigationTab,
     onTabSelected: (NavigationTab) -> Unit
 ) {

@@ -18,11 +18,11 @@ enum class KycStatus {
 data class UserEntity(
     @PrimaryKey val id: String = "usr_001",
     val fullName: String = "Hanan Irfan",
-    val email: String = "hanan.irfan@poultryvest.com",
+    val email: String = "hanan.irfan@eggvest.com",
     val phone: String = "+1 (555) 234-5678",
     val walletBalance: Double = 2850.00,
     val totalEarnings: Double = 412.50,
-    val referralCode: String = "POULTRYVEST-HANAN85",
+    val referralCode: String = "EGGVEST-HANAN85",
     val kycStatus: KycStatus = KycStatus.VERIFIED,
     val isPinEnabled: Boolean = true,
     val isBiometricsEnabled: Boolean = true,
@@ -192,5 +192,5 @@ data class AnnouncementEntity(
     val title: String,
     val content: String,
     val date: String,
-    val author: String = "PoultryVest Poultry Ops"
+    val author: String = "EggVest Poultry Ops"
 )

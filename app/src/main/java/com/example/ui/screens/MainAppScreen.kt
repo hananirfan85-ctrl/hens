@@ -18,8 +18,8 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.data.model.UserRole
-import com.example.ui.components.FarmVestBottomNavigation
-import com.example.ui.components.PoultryVestTopBar
+import com.example.ui.components.EggVestBottomNavigation
+import com.example.ui.components.EggVestTopBar
 import com.example.ui.components.NavigationTab
 import com.example.ui.viewmodel.FarmUiState
 import com.example.ui.viewmodel.FarmViewModel
@@ -44,8 +44,8 @@ fun MainAppScreen(viewModel: FarmViewModel) {
         snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             if (state.activeTicketId == null) {
-                PoultryVestTopBar(
-                    title = "PoultryVest",
+                EggVestTopBar(
+                    title = "EggVest",
                     userRole = state.user?.role ?: UserRole.INVESTOR,
                     unreadNotificationCount = state.notifications.count { !it.isRead },
                     onToggleRole = { viewModel.toggleRole() },
@@ -55,7 +55,7 @@ fun MainAppScreen(viewModel: FarmViewModel) {
         },
         bottomBar = {
             if (state.activeTicketId == null) {
-                FarmVestBottomNavigation(
+                EggVestBottomNavigation(
                     currentTab = currentTab,
                     onTabSelected = { currentTab = it }
                 )
